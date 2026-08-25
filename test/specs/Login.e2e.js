@@ -9,7 +9,7 @@ describe("Verify The LoginPage functionality", () => {
 
     });
 
-it("Verify the the signgin with google text", async () => {
+it("Verify the the sign-in with google text", async () => {
 
        await LoginPage.verifysiginwithgoogle();
 
@@ -20,13 +20,16 @@ it("Verify the the signgin with google text", async () => {
 
     });
 
-
     it("Verify the Email Field", async () => {
 
         await expect(LoginPage.emailField).toBeDisplayed();
 
     });
 
+it("Verify the terms and privacy text", async () => {
+
+        await LoginPage.verifyTermsPrivacyText();
+    });
 
     it("Verify the valid user able to login", async () => {
 

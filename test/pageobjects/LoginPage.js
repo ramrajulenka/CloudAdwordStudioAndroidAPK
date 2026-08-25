@@ -21,6 +21,10 @@ class LoginPage {
     return $('~Sign in with Google');
 }
 
+get termsPrivacyText() {
+    return $('android=new UiSelector().text("By signing up, you confirm that you have read and agree to the Terms & Privacy Policy")');
+}
+
     async verifyLogo() {
         await this.logo.waitForDisplayed({
             timeout: 10000
@@ -35,6 +39,12 @@ class LoginPage {
    }
 
 
+async verifyTermsPrivacyText() {
+    await expect(this.termsPrivacyText).toBeDisplayed();
+    await expect(this.termsPrivacyText).toHaveText(
+        'By signing up, you confirm that you have read and agree to the Terms & Privacy Policy'
+    );
+}
     async enterEmail(email) {
         await this.emailField.waitForDisplayed({
             timeout: 10000
