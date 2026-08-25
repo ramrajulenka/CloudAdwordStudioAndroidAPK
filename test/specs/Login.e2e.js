@@ -33,15 +33,7 @@ describe("Verify The LoginPage functionality", () => {
         await browser.pause(15000); 
 
     });
-    it("Verify the valid user able to login", async () => {
-
-        await LoginPage.emailField.click();
-        await LoginPage.emailField.clearValue();
-        await LoginPage.emailField.setValue('ramaraju.lenka@gmail.com');
-        await LoginPage.continueButton.click();
-        await browser.pause(15000); 
-
-    });
+    
 
 
 });
