@@ -17,6 +17,10 @@ class LoginPage {
     get continueButton() {
         return $('~Continue');
     }
+    get siginwithgoogle() {
+    return $('~Sign in with Google');
+}
+
     async verifyLogo() {
         await this.logo.waitForDisplayed({
             timeout: 10000
@@ -24,6 +28,12 @@ class LoginPage {
 
         return await this.logo.isDisplayed();
     }
+
+
+    async verifysiginwithgoogle() {
+      await expect(this.siginwithgoogle).toBeDisplayed();
+   }
+
 
     async enterEmail(email) {
         await this.emailField.waitForDisplayed({

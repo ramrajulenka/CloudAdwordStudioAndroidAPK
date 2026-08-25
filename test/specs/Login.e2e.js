@@ -9,7 +9,11 @@ describe("Verify The LoginPage functionality", () => {
 
     });
 
+it("Verify the the signgin with google text", async () => {
 
+       await LoginPage.verifysiginwithgoogle();
+
+    });
     it("Verify the SignUp Text", async () => {
 
         await expect(LoginPage.signupText).toBeDisplayed();
