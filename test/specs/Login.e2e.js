@@ -40,7 +40,5 @@ it("Verify the terms and privacy text", async () => {
         await browser.pause(15000); 
 
     });
-    
-
 
 });
