@@ -1,7 +1,7 @@
 export const config = {
     runner: 'local',
 
-    specs: ['./test/specs/**/*.js'],
+    specs: ['./test/specs/**/*.ts'],
 
     maxInstances: 1,
 
@@ -14,7 +14,7 @@ export const config = {
 
         'appium:udid': 'emulator-5554',
 
-        'appium:app': 'D:\\CloudAdwordAPKFinal Testing\\App\\CloudAdwordStudio27July.apk',
+        'appium:app': 'C:\\Users\\L Rama Raju\\OneDrive - FUERTE SOLUTIONS PRIVATE LIMITED\\ClonProject\\CloudAdwordStudioAndroidAPK\\App\\CloudAdwordStudio27July.apk',
 
         'appium:autoGrantPermissions': true
     }],
