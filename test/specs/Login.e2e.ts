@@ -1,5 +1,6 @@
 import { browser, expect } from '@wdio/globals';
 import LoginPage from '../pageobjects/LoginPage.js';
+import { testData } from '../utility/testData';
 
 describe("Verify The LoginPage functionality", () => {
 
@@ -21,7 +22,7 @@ describe("Verify The LoginPage functionality", () => {
 
    /* it("Verify the inavlid email toast message after entering the invalid email address", async () => {
         await LoginPage.emailField.setValue(
-            'invalid-email'
+            testData.invalidEmail
         );
         await LoginPage.continueButton.click();
         await browser.pause(2000);
@@ -38,11 +39,11 @@ describe("Verify The LoginPage functionality", () => {
 
     it("Verify the valid user able to login", async () => {
         await LoginPage.emailField.setValue(
-            'iamkira134@gmail.com'
+            testData.validEmail
         );
         await LoginPage.continueButton.click();
         await browser.pause(15000);
-        await LoginPage.enterOTP('123456');
+        await LoginPage.enterOTP(testData.Otp);
         await browser.pause(15000);
         await expect(LoginPage.dashboardTitle).toBeDisplayed();
     

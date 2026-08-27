@@ -5,7 +5,7 @@ export const config = {
 
     maxInstances: 1,
 
-    capabilities: [{
+  capabilities: [{
         platformName: 'Android',
 
         'appium:automationName': 'UiAutomator2',
@@ -19,6 +19,15 @@ export const config = {
         'appium:autoGrantPermissions': true
     }],
 
+ /* 
+capabilities: [{
+    platformName: 'Android',
+    'appium:automationName': 'UiAutomator2',
+    'appium:deviceName': 'Android',
+    'appium:udid': 'adb-10BF840D050012D-ejkpaC._adb-tls-connect._tcp',
+    'appium:app': 'C:\\Users\\L Rama Raju\\OneDrive - FUERTE SOLUTIONS PRIVATE LIMITED\\ClonProject\\CloudAdwordStudioAndroidAPK\\App\\CloudAdwordStudio27July.apk',
+    'appium:autoGrantPermissions': true
+}],   */
     services: [
         ['appium', {
             command: 'appium'

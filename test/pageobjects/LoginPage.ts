@@ -1,5 +1,6 @@
 import { $, expect } from '@wdio/globals';
 
+
 class LoginPage {
 
     get logo() {
