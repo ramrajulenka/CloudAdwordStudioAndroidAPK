@@ -54,4 +54,16 @@ await Dashboard.verifyOfflineStatus();
 
 });
 
+it("Verify the View All button on the Dashboard Page", async () => {
+await Dashboard.clickViewAllButton();
+await Dashboard.verifyScreenPageTitle(); 
+/*
+const actualText2 = await Dashboard.screenPageTitle.getText();
+console.log("================================");
+console.log(actualText2);
+console.log("================================");
+
+*/
+});
+
 });

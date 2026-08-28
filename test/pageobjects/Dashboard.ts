@@ -31,6 +31,12 @@ get onlineStatusText(){
 get offlineStatusText(){
     return $('android=new UiSelector().text("OFFLINE")')
 }
+get viewAllButton(){
+    return $('android=new UiSelector().description("View All")')
+}
+get screenPageTitle(){
+    return $('android=new UiSelector().text("Screens")')
+}
   //Methods to verify the elements on the dashboard page
     async verifyCloudID(): Promise<void> {
     await this.cloudID.waitForDisplayed({
@@ -74,4 +80,18 @@ async verifyOfflineStatus(): Promise<void>{
     await expect(this.offlineStatusText).toBeDisplayed();
 }
 
+async clickViewAllButton(): Promise<void>{
+    await this.viewAllButton.waitForDisplayed({
+        timeout:10000
+    });
+    await this.viewAllButton.click();
+
+}
+
+async verifyScreenPageTitle(): Promise<void>{
+    await this.screenPageTitle.waitForDisplayed({
+        timeout:10000
+    });
+    await expect(this.screenPageTitle).toBeDisplayed();
+}
     }export default new Dashboard();
