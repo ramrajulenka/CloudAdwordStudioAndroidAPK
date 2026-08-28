@@ -1,4 +1,5 @@
-import { $, expect } from '@wdio/globals';
+import { browser, $, expect } from '@wdio/globals';
+import { testData } from '../utility/testData';
 
 
 class LoginPage {
@@ -115,6 +116,16 @@ async verifyDashboard() {
 
         await expect(this.invalidOtpMessage).toBeDisplayed();
     }
+
+async LoginWithValidCredentials(): Promise<void> {
+     await this.enterEmail(testData.validEmail);
+     await this.continueButton.click();
+     await browser.pause (10000);
+     await this.enterOTP(testData.Otp);
+     timeout: 15000
+  //  await this.verifyDashboard();
+
+
 }
 
-export default new LoginPage();
+} export default new LoginPage();

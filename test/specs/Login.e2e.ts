@@ -44,7 +44,7 @@ describe("Verify The LoginPage functionality", () => {
         await LoginPage.continueButton.click();
         await browser.pause(15000);
         await LoginPage.enterOTP(testData.Otp);
-        await browser.pause(15000);
+        timeout: 15000
         await expect(LoginPage.dashboardTitle).toBeDisplayed();
     
     })
