@@ -5,13 +5,13 @@ describe("Verify the Dashboard page Functionality", () => {
 
 beforeEach(async () =>{
 
-await loginPage.LoginWithValidCredentials();
+
 
 });
 
 
 it("Verify the Dashboard page after login", async () => {
-    
+ await loginPage.LoginWithValidCredentials();   
 await loginPage.verifyDashboard();
 await Dashboard.verifyCloudID();
 
@@ -24,8 +24,34 @@ console.log("================================");
 });
 
 it("Verify the Username on the Dashboard page", async () => {
-await Dashboard.verifyUsername();           
+
+
+await Dashboard.verifyUsername(); 
+/*
+const actualText1 = await Dashboard.cloudID.getText();
+console.log("================================");
+console.log(actualText1);
+console.log("================================");
+*/
+});
+
+it("Verify the Location on the Dashboard Page", async () => {
+await Dashboard.verifyLocation();
 
 });
 
-})
+it("Verify the Total Screens on the Dashboard Page", async () => {
+await Dashboard.verifyTotalScreens();
+});
+
+it("Verify the Online Status on the Dashboard Page", async () => {
+await Dashboard.verifyOnlineStatus();   
+
+});
+
+it("Verify the Offline Status on the Dashboard Page", async () => {
+await Dashboard.verifyOfflineStatus();
+
+});
+
+});
