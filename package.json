@@ -9,6 +9,7 @@
     "@wdio/visual-service": "^10.1.0",
     "appium": "^3.7.0",
     "appium-uiautomator2-driver": "^8.5.0",
+    "esbuild": "^0.28.2",
     "mocha": "^11.8.0"
   },
   "scripts": {
